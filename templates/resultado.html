@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - {{ tipo }}</title>
+</head>
+<body>
+    <h1>Resultado de {{ tipo }}</h1>
+    <p>Los datos recibidos son los siguientes:</p>
+    <ul>
+        {% for key, value in datos.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

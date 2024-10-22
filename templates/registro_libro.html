@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Libro</title>
+</head>
+<body>
+    <h1>Registro de Libro</h1>
+    <form action="{{ url_for('registro_libro') }}" method="POST">
+        <label for="titulo">Título:</label><br>
+        <input type="text" name="titulo" id="titulo" required><br>
+        
+        <label for="autor">Autor:</label><br>
+        <input type="text" name="autor" id="autor" required><br>
+        
+        <label for="resumen">Resumen:</label><br>
+        <textarea name="resumen" id="resumen" rows="4" required></textarea><br>
+        
+        <label for="tipo_medio">Tipo de Medio:</label><br>
+        <input type="radio" name="tipo_medio" value="Físico" id="fisico" required> Físico
+        <input type="radio" name="tipo_medio" value="Magnético" id="magnetico" required> Magnético<br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
